@@ -11,3 +11,13 @@ def get_count_of_each_letter(string):
             else:
                 letters[l] = 1
     return letters
+
+def sort_on(items):
+    return items["num"]
+
+def sort_dict(dict):
+    char_list = []
+    for key in dict:
+        char_list.append({"char": key, "num": dict[key]})
+    char_list.sort(reverse=True, key=sort_on)
+    return char_list
